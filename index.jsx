@@ -1,13 +1,25 @@
 import React from 'react'
 import ssbref from 'ssb-ref'
-import CT from './contexttypes'
+
+const TYPES = {
+  ssb: React.PropTypes.object,
+  toUrl: React.PropTypes.func,
+  user: React.PropTypes.shape({
+    id: React.PropTypes.string,
+    profile: React.PropTypes.object
+  }),
+  users: React.PropTypes.shape({
+    names: React.PropTypes.object,
+    profiles: React.PropTypes.object
+  })
+}
 
 export default class PatchKit extends React.Component {
   constructor(props) {
     super(props)
   }
-  static childContextTypes = CT
-  static propTypes = CT
+  static childContextTypes = TYPES
+  static propTypes = TYPES
   getChildContext() {
     return {
       toUrl: this.props.toUrl || this.toUrl.bind(this),
