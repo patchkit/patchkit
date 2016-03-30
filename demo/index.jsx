@@ -18,12 +18,14 @@ function TodoView () {
 }
 
 function DemoContainer (props) {
+  const location = /[#\/]*([^?]*)/.exec(window.location.hash)[1]
   const onChange = e => {
     window.location.hash = '#/'+e.target.value
   }
+
   return <div>
     <p>
-      <select onChange={onChange}>
+      <select onChange={onChange} value={location}>
         <option value="common">Common Elements</option>
         <option value="pretty-raw">PrettyRaw</option>
         <option value="markdown">Markdown</option>

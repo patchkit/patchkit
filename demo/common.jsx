@@ -11,7 +11,7 @@ export default class CommonView extends React.Component {
     const userIds = Object.keys(users.profiles).concat([unknownUserId])
     return <div>
       <section className="msglink">
-        <header>&lt;MsgLink&gt;</header>
+        <header>&lt;patchkit/common.MsgLink&gt;</header>
         <div className="content">
           <p className="example"><Common.MsgLink id={msgId}>Message 1</Common.MsgLink></p>
           <p className="example"><Common.MsgLink id={msgId} name="Message 2" /></p>
@@ -19,7 +19,7 @@ export default class CommonView extends React.Component {
         </div>
       </section>
       <section className="bloblink">
-        <header>&lt;BlobLink&gt;</header>
+        <header>&lt;patchkit/common.BlobLink&gt;</header>
         <div className="content">
           <p className="example"><Common.BlobLink id={blobId}>Blob 1</Common.BlobLink></p>
           <p className="example"><Common.BlobLink id={blobId} name="Blob 2" /></p>
@@ -27,7 +27,7 @@ export default class CommonView extends React.Component {
         </div>
       </section>
       <section className="userlink">
-        <header>&lt;UserLink&gt;</header>
+        <header>&lt;patchkit/common.UserLink&gt;</header>
         <div className="content">
           { userIds.map(id => {
             return <div className="example" key={id}><Common.UserLink id={id} /></div>
@@ -35,14 +35,14 @@ export default class CommonView extends React.Component {
         </div>
       </section>
       <section className="userlinks">
-        <header>&lt;UserLinks&gt;</header>
+        <header>&lt;patchkit/common.UserLinks&gt;</header>
         <div className="content">
           <p className="example">No limit:<br/><Common.UserLinks ids={userIds} /></p>
           <p className="example">Limited to 2:<br/><Common.UserLinks ids={userIds} limit={2} /></p>
         </div>
       </section>
       <section className="userpic">
-        <header>&lt;UserPic&gt;</header>
+        <header>&lt;patchkit/common.UserPic&gt;</header>
         <div className="content">
           { userIds.slice(0,2).map(id => {
             return <div className="example" key={id}><Common.UserPic id={id} /></div>
@@ -51,21 +51,21 @@ export default class CommonView extends React.Component {
         </div>
       </section>
       <section className="userpics">
-        <header>&lt;UserPics&gt;</header>
+        <header>&lt;patchkit/common.UserPics&gt;</header>
         <div className="content">
           <p className="example">No limit:<br/><Common.UserPics ids={userIds} /></p>
           <p className="example">Limited to 2:<br/><Common.UserPics ids={userIds} limit={2} /></p>
         </div>
       </section>
       <section className="nicedate">
-        <header>&lt;NiceDate&gt;</header>
+        <header>&lt;patchkit/common.NiceDate&gt;</header>
         <div className="content">
           <p className="example"><Common.NiceDate ts={Date.now()} /></p>
           <p className="example"><Common.NiceDate ts={Date.now()} ago /></p>
         </div>
       </section>
       <section className="hovershifter">
-        <header>&lt;HoverShifter&gt;</header>
+        <header>&lt;patchkit/common.HoverShifter&gt;</header>
         <div className="content">
           <div className="example">
             <Common.HoverShifter>
