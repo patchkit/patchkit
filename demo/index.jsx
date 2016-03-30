@@ -9,6 +9,7 @@ import CommonView from './common'
 import PrettyRawView from './pretty-raw'
 import MarkdownView from './markdown'
 import MsgViewView from './msg-view'
+import SteppedProgressBarView from './stepped-progress-bar'
 
 import user from '../fixtures/user'
 import users from '../fixtures/users'
@@ -30,6 +31,7 @@ function DemoContainer (props) {
         <option value="pretty-raw">PrettyRaw</option>
         <option value="markdown">Markdown</option>
         <option value="msg-view">MsgView</option>
+        <option value="stepped-progress-bar">SteppedProgressBar</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -75,6 +77,7 @@ class PatchKitDemo extends React.Component {
           <Route path="pretty-raw" component={PrettyRawView} />
           <Route path="markdown" component={MarkdownView} />
           <Route path="msg-view" component={MsgViewView} />
+          <Route path="stepped-progress-bar" component={SteppedProgressBarView} />
         </Route>
       </Router>
     </PatchKit>
