@@ -72,11 +72,12 @@ export default class CommonView extends React.Component {
         <div className="content"><Common.UserPics ids={userIds} limit={2} /></div>
       </section>
       <section className="common-nicedate">
-        <header>&lt;NiceDate&gt;</header>
-        <div className="content">
-          <p className="example"><Common.NiceDate ts={Date.now()} /></p>
-          <p className="example"><Common.NiceDate ts={Date.now()} ago /></p>
-        </div>
+        <header>&lt;NiceDate ts="..."&gt;</header>
+        <div className="content"><Common.NiceDate ts={Date.now()} /></div>
+      </section>
+      <section className="common-nicedate-ago">
+        <header>&lt;NiceDate ts="..." ago&gt;</header>
+        <div className="content"><Common.NiceDate ts={Date.now()} ago /></div>
       </section>
       <section className="common-hovershifter">
         <header>&lt;HoverShifter&gt;</header>
