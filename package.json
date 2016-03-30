@@ -19,11 +19,16 @@
     "babel-preset-stage-0": "^6.3.13",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "less": "^2.5.3",
+    "nodemon": "^1.8.1",
     "tape": "^4.5.1",
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "demo": "(cd ./demo && python -m SimpleHTTPServer) & NODE_ENV=development watchify ./demo/index.jsx --extension=.jsx -o ./demo/index.build.js -v --debug"
+    "demo": "npm run demo-server & npm run demo-js & npm run demo-css",
+    "demo-server": "(cd ./demo && python -m SimpleHTTPServer)",
+    "demo-js": "NODE_ENV=development watchify ./demo/index.jsx --extension=.jsx -o ./demo/index.build.js -v --debug",
+    "demo-css": "nodemon -q -e less -w ./ -x 'lessc --verbose ./demo/index.less ./demo/index.build.css'"
   },
   "repository": {
     "type": "git",
