@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute } from 'react-router'
 import PatchKit from '../index'
+import runTests from './tests'
 
 import CommonView from './common'
 
@@ -22,6 +23,7 @@ function DemoContainer (props) {
         <option value="common">Common Elements</option>
         <option value="profile">Profile Elements</option>
       </select>
+      {' '}<button onClick={runTests}>Run tests</button>
     </p>
     { props.children }
   </div>

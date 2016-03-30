@@ -6,11 +6,10 @@ body {
   font-family: sans-serif;
 }
 section {
-  display: inline-block;
-  min-width: 300px;
   border: 1px solid #ccc;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   border-radius: 3px;
+  margin-bottom: 1em;
 }
 section > header {
   background: #fafafa;
@@ -28,6 +27,8 @@ section > .content {
   </head>
   <body>
     <div id="app"></div>
+    <div id="tests"></div>
+    <script src="./global-helpers.js"></script>
     <script src="./index.build.js"></script>
   </body>
 </html>

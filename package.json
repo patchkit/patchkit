@@ -18,20 +18,10 @@
     "babel-preset-stage-0": "^6.3.13",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
-    "enzyme": "^2.0.0",
-    "jasmine-core": "^2.4.1",
-    "karma": "^0.13.19",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-browserify": "^5.0.0",
-    "karma-chrome-launcher": "^0.2.2",
-    "karma-jasmine": "^0.3.6",
-    "karma-phantomjs-launcher": "^1.0.0",
-    "phantomjs-prebuilt": "^2.1.4",
+    "tape": "^4.5.1",
     "watchify": "^3.7.0"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
-    "test:watch": "./node_modules/karma/bin/karma start --auto-watch",
     "demo": "(cd ./demo && python -m SimpleHTTPServer) & NODE_ENV=development watchify ./demo/index.jsx --extension=.jsx -o ./demo/index.build.js -v --debug"
   },
   "repository": {
