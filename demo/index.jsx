@@ -8,6 +8,7 @@ import runTests from './tests'
 import CommonView from './common'
 import PrettyRawView from './pretty-raw'
 import MarkdownView from './markdown'
+import MsgViewView from './msg-view'
 
 import user from '../fixtures/user'
 import users from '../fixtures/users'
@@ -26,6 +27,7 @@ function DemoContainer (props) {
         <option value="common">Common Elements</option>
         <option value="pretty-raw">PrettyRaw</option>
         <option value="markdown">Markdown</option>
+        <option value="msg-view">MsgView</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -62,7 +64,7 @@ class PatchKitDemo extends React.Component {
     return ''
   }
 
-  render() {
+  render() {  
     return <PatchKit user={user} users={users} toUrl={this.toUrl}>
       <Router>
         <Route path="/" component={DemoContainer}>
@@ -70,6 +72,7 @@ class PatchKitDemo extends React.Component {
           <Route path="common" component={CommonView} />
           <Route path="pretty-raw" component={PrettyRawView} />
           <Route path="markdown" component={MarkdownView} />
+          <Route path="msg-view" component={MsgViewView} />
         </Route>
       </Router>
     </PatchKit>

@@ -1,10 +1,10 @@
 import React from 'react'
 import * as Markdown from '../markdown'
-import msgs from '../fixtures/msgs'
+import * as msgs from '../fixtures/msgs'
 
 export default class MarkdownView extends React.Component {
   render() {
-    const msg = { value: msgs[0] }
+    const msg = msgs.posts[0]
     return <div>
       <section className="markdown-block">
         <header>&lt;Markdown.Block&gt;</header>

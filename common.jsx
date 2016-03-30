@@ -1,7 +1,7 @@
 'use babel'
 import React from 'react'
 import { Link } from 'react-router'
-import * as u from './util'
+import * as u from './lib/util'
 
 export class UserLink extends React.Component {
   static contextTypes = {
