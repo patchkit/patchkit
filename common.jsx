@@ -22,7 +22,7 @@ export class MsgLink extends React.Component {
 
 export class BlobLink extends React.Component {
   render() {
-    return <a href={'/'+encodeURIComponent(this.props.id)}>{this.props.name||this.props.id}</a>
+    return <a href={'/'+encodeURIComponent(this.props.id)}>{this.props.children||this.props.name||this.props.id}</a>
   }
 }
 
@@ -64,7 +64,7 @@ export class UserPic extends React.Component {
   render() {
     const name = this.context.users.names[this.props.id] || u.shortString(this.props.id, 6)
     return <Link to={'/profile/'+encodeURIComponent(this.props.id)} className="user-pic hint--top" data-hint={name}>
-      <img src={u.getProfilePicUrl(this.context.users, this.props.id)} />
+      <img src={u.getProfilePicUrl(this.context.users, this.props.id, this.props.fallback)} />
     </Link>
   }
 }
@@ -89,11 +89,17 @@ export class UserPics extends React.Component {
     }
 
     return <span>
-      {ids.map((id, i) => <UserPic id={id} key={`pic-${i}`} hovertips={this.props.hovertips} />)}
+      {ids.map((id, i) => <UserPic id={id} key={`pic-${i}`} hovertips={this.props.hovertips} fallback={this.props.fallback} />)}
       {overLimitNames
         ? <span className="hint--top" data-hint={overLimitNames}> and {nOver} other{u.plural(nOver)}</span>
         : '' }
     </span>
+  }
+}
+
+export class NiceDate extends React.Component {
+  render() {
+    return <span>{u.niceDate(this.props.ts, this.props.ago)}</span>
   }
 }
 
@@ -105,11 +111,5 @@ export class HoverShifter extends React.Component {
   render() {
     const child = this.props.children && this.props.children[+this.state.isHovering]
     return <span onMouseEnter={()=>this.setState({isHovering: true})} onMouseLeave={()=>this.setState({isHovering: false})}>{child}</span>
-  }
-}
-
-export class NiceDate extends React.Component {
-  render() {
-    return <span>{u.niceDate(this.props.ts, this.props.ago)}</span>
   }
 }

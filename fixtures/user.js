@@ -5,7 +5,7 @@ export default {
     "self": {
       "name": "paul",
       "image": {
-        "link": "&NfP4H4NZCfiPQ6AZ6fEmilbFL8Hz3wTQVeaxbCnNEt4=.sha256",
+        "link": "paul.png",
         "size": 347856,
         "type": "image/png",
         "width": 512,
@@ -15,7 +15,7 @@ export default {
     "byMe": {
       "name": null,
       "image": {
-        "link": "&NfP4H4NZCfiPQ6AZ6fEmilbFL8Hz3wTQVeaxbCnNEt4=.sha256",
+        "link": "paul.png",
         "size": 347856,
         "type": "image/png",
         "width": 512,
@@ -39,7 +39,7 @@ export default {
       ]
     },
     "images": {
-      "&NfP4H4NZCfiPQ6AZ6fEmilbFL8Hz3wTQVeaxbCnNEt4=.sha256": [
+      "paul.png": [
         "@hxGxqPrplLjRG2vtjQL87abX4QKqeLgCwQpS730nNwE=.ed25519",
         "@p13zSAiOpguI9nsawkGijsnMfWmFd5rlUNpzekEE+vI=.ed25519"
       ]

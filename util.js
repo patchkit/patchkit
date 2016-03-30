@@ -62,23 +62,10 @@ export function getProfilePicRef (users, id) {
   return link ? link.link : false
 }
 
-export function getProfilePicUrl (users, id) {
-  var url = './img/default-prof-pic.png'
+export function getProfilePicUrl (users, id, fallback) {
+  var url = fallback||'./img/default-prof-pic.png'
   var link = getProfilePic(users, id)
-  if (link) {
+  if (link)
     url = '/'+link.link
-
-    // append the 'backup img' flag, so we always have an image
-    url += '?fallback=img'
-
-    // if we know the filetype, try to construct a good filename
-    if (link.type) {
-      var ext = link.type.split('/')[1]
-      if (ext) {
-        var name = users.names[id] || 'profile'
-        url += '&name='+encodeURIComponent(name+'.'+ext)
-      }
-    }
-  }
   return url
 }

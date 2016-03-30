@@ -11,9 +11,9 @@ export default {
       "self": {
         "name": "paul",
         "image": {
-          "link": "&NfP4H4NZCfiPQ6AZ6fEmilbFL8Hz3wTQVeaxbCnNEt4=.sha256",
+          "link": "pic1.jpg",
           "size": 347856,
-          "type": "image/png",
+          "type": "image/jpg",
           "width": 512,
           "height": 512
         }
@@ -21,9 +21,9 @@ export default {
       "byMe": {
         "name": null,
         "image": {
-          "link": "&NfP4H4NZCfiPQ6AZ6fEmilbFL8Hz3wTQVeaxbCnNEt4=.sha256",
+          "link": "pic1.jpg",
           "size": 347856,
-          "type": "image/png",
+          "type": "image/jpg",
           "width": 512,
           "height": 512
         }
@@ -34,9 +34,9 @@ export default {
       "self": {
         "name": "cel",
         "image": {
-          "link": "&scEUJWLNge+k7MZO4SYRYKkUpwLttOz4DKxGm2ArczM=.sha256",
+          "link": "pic2.jpg",
           "size": 118975,
-          "type": "image/png",
+          "type": "image/jpg",
           "width": 275,
           "height": 275
         }
@@ -51,9 +51,9 @@ export default {
       "self": {
         "name": "mixmix",
         "image": {
-          "link": "&qxLTMH6wwfCOC6P/07QNrttkDBt/huzZxkUmuLFfg3A=.sha256",
+          "link": "pic3.jpg",
           "size": 137188,
-          "type": "image/png",
+          "type": "image/jpg",
           "width": 275,
           "height": 275
         }
@@ -68,9 +68,9 @@ export default {
       "self": {
         "name": "Dominic",
         "image": {
-          "link": "&OFVGdXEOVo9iX73csTWMbmGf0mwhEzMhckHlUF0Pi5I=.sha256",
+          "link": "pic4.jpg",
           "size": 501125,
-          "type": "image/png",
+          "type": "image/jpg",
           "width": 512,
           "height": 512
         }
