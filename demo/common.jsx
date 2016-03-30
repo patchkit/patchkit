@@ -10,62 +10,76 @@ export default class CommonView extends React.Component {
   render() {
     const userIds = Object.keys(users.profiles).concat([unknownUserId])
     return <div>
-      <section className="msglink">
-        <header>&lt;patchkit/common.MsgLink&gt;</header>
-        <div className="content">
-          <p className="example"><Common.MsgLink id={msgId}>Message 1</Common.MsgLink></p>
-          <p className="example"><Common.MsgLink id={msgId} name="Message 2" /></p>
-          <p className="example"><Common.MsgLink id={msgId} /></p>
-        </div>
+      <h1>patchkit/common</h1>
+      <section className="common-msglink">
+        <header>&lt;MsgLink id="..."&gt;</header>
+        <div className="content"><Common.MsgLink id={msgId} /></div>
       </section>
-      <section className="bloblink">
-        <header>&lt;patchkit/common.BlobLink&gt;</header>
-        <div className="content">
-          <p className="example"><Common.BlobLink id={blobId}>Blob 1</Common.BlobLink></p>
-          <p className="example"><Common.BlobLink id={blobId} name="Blob 2" /></p>
-          <p className="example"><Common.BlobLink id={blobId} /></p>
-        </div>
+      <section className="common-msglink-children">
+        <header>&lt;MsgLink id="..."&gt;Message 1&lt;/MsgLink&gt;</header>
+        <div className="content"><Common.MsgLink id={msgId}>Message 1</Common.MsgLink></div>
       </section>
-      <section className="userlink">
-        <header>&lt;patchkit/common.UserLink&gt;</header>
-        <div className="content">
-          { userIds.map(id => {
-            return <div className="example" key={id}><Common.UserLink id={id} /></div>
-          }) }
-        </div>
+      <section className="common-msglink-name">
+        <header>&lt;MsgLink id="..." name="Message 2"&gt;</header>
+        <div className="content"><Common.MsgLink id={msgId} name="Message 2" /></div>
       </section>
-      <section className="userlinks">
-        <header>&lt;patchkit/common.UserLinks&gt;</header>
-        <div className="content">
-          <p className="example">No limit:<br/><Common.UserLinks ids={userIds} /></p>
-          <p className="example">Limited to 2:<br/><Common.UserLinks ids={userIds} limit={2} /></p>
-        </div>
+      <section className="common-bloblink">
+        <header>&lt;BlobLink id="..."&gt;</header>
+        <div className="content"><Common.BlobLink id={blobId} /></div>
       </section>
-      <section className="userpic">
-        <header>&lt;patchkit/common.UserPic&gt;</header>
-        <div className="content">
-          { userIds.slice(0,2).map(id => {
-            return <div className="example" key={id}><Common.UserPic id={id} /></div>
-          }) }
-          <div className="example"><Common.UserPic id={userIds.slice(-1)[0]} /></div>
-        </div>
+      <section className="common-bloblink-children">
+        <header>&lt;BlobLink id="..."&gt;Blob 1&lt;/BlobLink&gt;</header>
+        <div className="content"><Common.BlobLink id={blobId}>Blob 1</Common.BlobLink></div>
       </section>
-      <section className="userpics">
-        <header>&lt;patchkit/common.UserPics&gt;</header>
-        <div className="content">
-          <p className="example">No limit:<br/><Common.UserPics ids={userIds} /></p>
-          <p className="example">Limited to 2:<br/><Common.UserPics ids={userIds} limit={2} /></p>
-        </div>
+      <section className="common-bloblink-name">
+        <header>&lt;BlobLink id="..." name="Blob 2"&gt;</header>
+        <div className="content"><Common.BlobLink id={blobId} name="Blob 2" /></div>
       </section>
-      <section className="nicedate">
-        <header>&lt;patchkit/common.NiceDate&gt;</header>
+      <section className="common-userlink">
+        <header>&lt;UserLink id="..."&gt;</header>
+        <div className="content"><Common.UserLink id={userIds[0]} /></div>
+      </section>
+      <section className="common-userlink-override">
+        <header>&lt;UserLink id="..."&gt; (name override)</header>
+        <div className="content"><Common.UserLink id={userIds[3]} /></div>
+      </section>
+      <section className="common-userlink-noname">
+        <header>&lt;UserLink id="..."&gt; (no name)</header>
+        <div className="content"><Common.UserLink id={userIds[4]} /></div>
+      </section>
+      <section className="common-userlinks">
+        <header>&lt;UserLinks ids="..."&gt;</header>
+        <div className="content"><Common.UserLinks ids={userIds} /></div>
+      </section>
+      <section className="common-userlinks-limit">
+        <header>&lt;UserLinks ids="..." limit="2"&gt;</header>
+        <div className="content"><Common.UserLinks ids={userIds} limit={2} /></div>
+      </section>
+      <section className="common-userpic">
+        <header>&lt;UserPics id="..."&gt;</header>
+        <div className="content"><Common.UserPic id={userIds[0]} /></div>
+      </section>
+      <section className="common-userpic-notfound">
+        <header>&lt;UserPic id="..."&gt; (not found)</header>
+        <div className="content"><Common.UserPic id={userIds[userIds.length - 1]} /></div>
+      </section>
+      <section className="common-userpics">
+        <header>&lt;UserPics ids="..."&gt;</header>
+        <div className="content"><Common.UserPics ids={userIds} /></div>
+      </section>
+      <section className="common-userpics-limit">
+        <header>&lt;UserPics ids="..." limit="2"&gt;</header>
+        <div className="content"><Common.UserPics ids={userIds} limit={2} /></div>
+      </section>
+      <section className="common-nicedate">
+        <header>&lt;NiceDate&gt;</header>
         <div className="content">
           <p className="example"><Common.NiceDate ts={Date.now()} /></p>
           <p className="example"><Common.NiceDate ts={Date.now()} ago /></p>
         </div>
       </section>
-      <section className="hovershifter">
-        <header>&lt;patchkit/common.HoverShifter&gt;</header>
+      <section className="common-hovershifter">
+        <header>&lt;HoverShifter&gt;</header>
         <div className="content">
           <div className="example">
             <Common.HoverShifter>
