@@ -10,6 +10,8 @@
     "react-addons-test-utils": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-router": "^1.0.2",
+    "ssb-markdown": "^3.0.0",
+    "ssb-msgs": "^5.2.0",
     "ssb-ref": "^2.3.0"
   },
   "devDependencies": {

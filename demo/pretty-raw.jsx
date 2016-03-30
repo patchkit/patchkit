@@ -2,8 +2,6 @@ import React from 'react'
 import * as PrettyRaw from '../pretty-raw'
 import msgs from '../fixtures/msgs'
 
-console.log(msgs)
-
 export default class PrettyRawView extends React.Component {
   render() {
     return <div>

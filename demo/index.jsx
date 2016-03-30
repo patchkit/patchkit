@@ -7,6 +7,7 @@ import runTests from './tests'
 
 import CommonView from './common'
 import PrettyRawView from './pretty-raw'
+import MarkdownView from './markdown'
 
 import user from '../fixtures/user'
 import users from '../fixtures/users'
@@ -24,6 +25,7 @@ function DemoContainer (props) {
       <select onChange={onChange}>
         <option value="common">Common Elements</option>
         <option value="pretty-raw">PrettyRaw</option>
+        <option value="markdown">Markdown</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -51,7 +53,7 @@ class PatchKitDemo extends React.Component {
     else if (ssbref.isMsgId(ref))
       return '#/msg/'+encodeURIComponent(ref)
     else if (ssbref.isBlobId(ref))
-      return '/'+encodeURIComponent(ref)
+      return '/'+(ref)
     else if (opts && opts.isProfilePic) {
       if (ref)
         return '/img/'+ref
@@ -67,9 +69,7 @@ class PatchKitDemo extends React.Component {
           <IndexRoute component={CommonView} />
           <Route path="common" component={CommonView} />
           <Route path="pretty-raw" component={PrettyRawView} />
-          <Route path="profile" component={TodoView} />
-          <Route path="profile/:id" component={TodoView} />
-          <Route path="msg/:id" component={TodoView} />
+          <Route path="markdown" component={MarkdownView} />
         </Route>
       </Router>
     </PatchKit>
