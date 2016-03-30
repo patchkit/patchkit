@@ -45,16 +45,16 @@ export default class CommonView extends React.Component {
         <header>&lt;UserPic&gt;</header>
         <div className="content">
           { userIds.slice(0,2).map(id => {
-            return <div className="example" key={id}><Common.UserPic id={id} fallback="fallback.png" /></div>
+            return <div className="example" key={id}><Common.UserPic id={id} /></div>
           }) }
-          <div className="example"><Common.UserPic id={userIds.slice(-1)[0]} fallback="fallback.png" /></div>
+          <div className="example"><Common.UserPic id={userIds.slice(-1)[0]} /></div>
         </div>
       </section>
       <section className="userpics">
         <header>&lt;UserPics&gt;</header>
         <div className="content">
-          <p className="example">No limit:<br/><Common.UserPics ids={userIds} fallback="fallback.png" /></p>
-          <p className="example">Limited to 2:<br/><Common.UserPics ids={userIds} limit={2} fallback="fallback.png" /></p>
+          <p className="example">No limit:<br/><Common.UserPics ids={userIds} /></p>
+          <p className="example">Limited to 2:<br/><Common.UserPics ids={userIds} limit={2} /></p>
         </div>
       </section>
       <section className="nicedate">

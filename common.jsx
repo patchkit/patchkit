@@ -5,24 +5,31 @@ import * as u from './util'
 
 export class UserLink extends React.Component {
   static contextTypes = {
-    users: React.PropTypes.object
+    users: React.PropTypes.object,
+    toUrl: React.PropTypes.func
   }
   render() {
     const name = this.context.users.names[this.props.id] || u.shortString(this.props.id, 6)
     const label = (this.props.shorten) ? name.slice(0, 3) : name
-    return <Link to={'/profile/'+encodeURIComponent(this.props.id)} className="user-link" title={name}>{label}</Link>
+    return <a href={this.context.toUrl(this.props.id)} className="user-link" title={name}>{label}</a>
   }
 }
 
 export class MsgLink extends React.Component {
+  static contextTypes = {
+    toUrl: React.PropTypes.func
+  }
   render() {
-    return <Link to={'/msg/'+encodeURIComponent(this.props.id)}>{this.props.children||this.props.name||this.props.id}</Link>
+    return <a href={this.context.toUrl(this.props.id)}>{this.props.children||this.props.name||this.props.id}</a>
   }
 }
 
 export class BlobLink extends React.Component {
+  static contextTypes = {
+    toUrl: React.PropTypes.func
+  }
   render() {
-    return <a href={'/'+encodeURIComponent(this.props.id)}>{this.props.children||this.props.name||this.props.id}</a>
+    return <a href={this.context.toUrl(this.props.id)}>{this.props.children||this.props.name||this.props.id}</a>
   }
 }
 
@@ -59,13 +66,14 @@ export class UserLinks extends React.Component {
 
 export class UserPic extends React.Component {
   static contextTypes = {
-    users: React.PropTypes.object
+    users: React.PropTypes.object,
+    toUrl: React.PropTypes.func
   }
   render() {
     const name = this.context.users.names[this.props.id] || u.shortString(this.props.id, 6)
-    return <Link to={'/profile/'+encodeURIComponent(this.props.id)} className="user-pic hint--top" data-hint={name}>
-      <img src={u.getProfilePicUrl(this.context.users, this.props.id, this.props.fallback)} />
-    </Link>
+    return <a href={this.context.toUrl(this.props.id)} className="user-pic hint--top" data-hint={name}>
+      <img src={u.getProfilePicUrl(this.context.users, this.props.id, this.context.toUrl)} />
+    </a>
   }
 }
 
@@ -89,7 +97,7 @@ export class UserPics extends React.Component {
     }
 
     return <span>
-      {ids.map((id, i) => <UserPic id={id} key={`pic-${i}`} hovertips={this.props.hovertips} fallback={this.props.fallback} />)}
+      {ids.map((id, i) => <UserPic id={id} key={`pic-${i}`} hovertips={this.props.hovertips} />)}
       {overLimitNames
         ? <span className="hint--top" data-hint={overLimitNames}> and {nOver} other{u.plural(nOver)}</span>
         : '' }

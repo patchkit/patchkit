@@ -62,10 +62,7 @@ export function getProfilePicRef (users, id) {
   return link ? link.link : false
 }
 
-export function getProfilePicUrl (users, id, fallback) {
-  var url = fallback||'./img/default-prof-pic.png'
+export function getProfilePicUrl (users, id, toUrl) {
   var link = getProfilePic(users, id)
-  if (link)
-    url = '/'+link.link
-  return url
+  return toUrl(link && link.link, { isProfilePic: true })
 }

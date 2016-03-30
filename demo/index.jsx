@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute } from 'react-router'
+import ssbref from 'ssb-ref'
 import PatchKit from '../index'
 import runTests from './tests'
 
@@ -38,8 +39,28 @@ class PatchKitDemo extends React.Component {
     }
   }
 
+  toUrl(ref, opts) {
+    // @-mentions
+    if (opts && opts.mentionNames && ref in opts.mentionNames)
+      return '#/profile/'+encodeURIComponent(opts.mentionNames[ref])
+
+    // standard ssb-refs
+    if (ssbref.isFeedId(ref))
+      return '#/profile/'+encodeURIComponent(ref)
+    else if (ssbref.isMsgId(ref))
+      return '#/msg/'+encodeURIComponent(ref)
+    else if (ssbref.isBlobId(ref))
+      return '/'+encodeURIComponent(ref)
+    else if (opts && opts.isProfilePic) {
+      if (ref)
+        return '/img/'+ref
+      return '/img/fallback.png'
+    }
+    return ''
+  }
+
   render() {
-    return <PatchKit user={user} users={users}>
+    return <PatchKit user={user} users={users} toUrl={this.toUrl}>
       <Router>
         <Route path="/" component={DemoContainer}>
           <IndexRoute component={CommonView} />
