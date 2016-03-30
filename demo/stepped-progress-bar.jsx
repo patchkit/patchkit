@@ -1,5 +1,5 @@
 import React from 'react'
-import SteppedProgressBar from '../stepped-progress-bar'
+import SteppedProgressBar from 'patchkit-stepped-progress-bar'
 
 class SPB extends React.Component {
   constructor(props) {

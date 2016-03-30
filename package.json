@@ -2,7 +2,7 @@
   "name": "patchkit",
   "version": "1.0.0",
   "description": "Patchwork UI elements",
-  "main": "index.js",
+  "main": "index.jsx",
   "dependencies": {
     "classnames": "^2.2.3",
     "history": "^1.13.1",
@@ -28,6 +28,7 @@
     "browserify": "^13.0.0",
     "less": "^2.5.3",
     "nodemon": "^1.8.1",
+    "patchkit-stepped-progress-bar": "^1.0.0",
     "tape": "^4.5.1",
     "watchify": "^3.7.0"
   },

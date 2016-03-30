@@ -3,6 +3,7 @@ import ssbref from 'ssb-ref'
 
 const TYPES = {
   ssb: React.PropTypes.object,
+  emit: React.PropTypes.func,
   toUrl: React.PropTypes.func,
   user: React.PropTypes.shape({
     id: React.PropTypes.string,
