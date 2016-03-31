@@ -11,14 +11,6 @@ export default class CommonView extends React.Component {
     const userIds = Object.keys(users.profiles).concat([unknownUserId])
     return <div>
       <h1>patchkit/common</h1>
-      <section className="common-nicedate">
-        <header>&lt;NiceDate ts="..."&gt;</header>
-        <div className="content"><Common.NiceDate ts={Date.now()} /></div>
-      </section>
-      <section className="common-nicedate-ago">
-        <header>&lt;NiceDate ts="..." ago&gt;</header>
-        <div className="content"><Common.NiceDate ts={Date.now()} ago /></div>
-      </section>
       <section className="common-hovershifter">
         <header>&lt;HoverShifter&gt;</header>
         <div className="content">

@@ -7,6 +7,7 @@ import runTests from './tests'
 
 import CommonView from './common'
 import LinksDemo from 'patchkit-links/demo'
+import NiceDateDemo from 'patchkit-nicedate/demo'
 import PrettyRawView from './pretty-raw'
 import MarkdownView from './markdown'
 import MsgViewView from './msg-view'
@@ -30,6 +31,7 @@ function DemoContainer (props) {
       <select onChange={onChange} value={location}>
         <option value="common">Common Elements</option>
         <option value="links">patchkit-links</option>
+        <option value="nicedate">patchkit-nicedate</option>
         <option value="pretty-raw">PrettyRaw</option>
         <option value="markdown">Markdown</option>
         <option value="msg-view">MsgView</option>
@@ -77,6 +79,7 @@ class PatchKitDemo extends React.Component {
           <IndexRoute component={CommonView} />
           <Route path="common" component={CommonView} />
           <Route path="links" component={LinksDemo} />
+          <Route path="nicedate" component={NiceDateDemo} />
           <Route path="pretty-raw" component={PrettyRawView} />
           <Route path="markdown" component={MarkdownView} />
           <Route path="msg-view" component={MsgViewView} />
