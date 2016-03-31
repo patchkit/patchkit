@@ -15,7 +15,6 @@
     "react-clipboard.js": "^0.1.7",
     "react-dom": "^0.14.6",
     "react-router": "^1.0.2",
-    "ssb-markdown": "^3.0.0",
     "ssb-msgs": "^5.2.0",
     "ssb-ref": "^2.3.0"
   },
@@ -31,6 +30,7 @@
     "patchkit-fixtures": "^1.0.1",
     "patchkit-hover-shifter": "^1.0.0",
     "patchkit-links": "^1.0.1",
+    "patchkit-markdown": "^1.0.0",
     "patchkit-nicedate": "^1.0.0",
     "patchkit-niceraw": "^1.0.0",
     "patchkit-stepped-progress-bar": "^1.0.0",

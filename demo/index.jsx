@@ -9,7 +9,7 @@ import LinksDemo from 'patchkit-links/demo'
 import NiceDateDemo from 'patchkit-nicedate/demo'
 import HoverShifterDemo from 'patchkit-hover-shifter/demo'
 import NiceRawDemo from 'patchkit-niceraw/demo'
-import MarkdownView from './markdown'
+import MarkdownDemo from 'patchkit-markdown/demo'
 import MsgViewView from './msg-view'
 import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
 
@@ -33,7 +33,7 @@ function DemoContainer (props) {
         <option value="nicedate">patchkit-nicedate</option>
         <option value="hover-shifter">patchkit-hover-shifter</option>
         <option value="niceraw">patchkit-niceraw</option>
-        <option value="markdown">Markdown</option>
+        <option value="markdown">patchkit-markdown</option>
         <option value="msg-view">MsgView</option>
         <option value="stepped-progress-bar">patchkit-stepped-progress-bar</option>
       </select>
@@ -81,7 +81,7 @@ class PatchKitDemo extends React.Component {
           <Route path="nicedate" component={NiceDateDemo} />
           <Route path="hover-shifter" component={HoverShifterDemo} />
           <Route path="niceraw" component={NiceRawDemo} />
-          <Route path="markdown" component={MarkdownView} />
+          <Route path="markdown" component={MarkdownDemo} />
           <Route path="msg-view" component={MsgViewView} />
           <Route path="stepped-progress-bar" component={SteppedProgressBarDemo} />
         </Route>
