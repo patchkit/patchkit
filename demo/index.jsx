@@ -5,10 +5,10 @@ import ssbref from 'ssb-ref'
 import PatchKit from '../index'
 import runTests from './tests'
 
-import CommonView from './common'
 import LinksDemo from 'patchkit-links/demo'
 import NiceDateDemo from 'patchkit-nicedate/demo'
-import PrettyRawView from './pretty-raw'
+import HoverShifterDemo from 'patchkit-hover-shifter/demo'
+import NiceRawDemo from 'patchkit-niceraw/demo'
 import MarkdownView from './markdown'
 import MsgViewView from './msg-view'
 import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
@@ -29,10 +29,10 @@ function DemoContainer (props) {
   return <div>
     <p>
       <select onChange={onChange} value={location}>
-        <option value="common">Common Elements</option>
         <option value="links">patchkit-links</option>
         <option value="nicedate">patchkit-nicedate</option>
-        <option value="pretty-raw">PrettyRaw</option>
+        <option value="hover-shifter">patchkit-hover-shifter</option>
+        <option value="niceraw">patchkit-niceraw</option>
         <option value="markdown">Markdown</option>
         <option value="msg-view">MsgView</option>
         <option value="stepped-progress-bar">patchkit-stepped-progress-bar</option>
@@ -76,11 +76,11 @@ class PatchKitDemo extends React.Component {
     return <PatchKit user={user} users={users} toUrl={this.toUrl}>
       <Router>
         <Route path="/" component={DemoContainer}>
-          <IndexRoute component={CommonView} />
-          <Route path="common" component={CommonView} />
+          <IndexRoute component={LinksDemo} />
           <Route path="links" component={LinksDemo} />
           <Route path="nicedate" component={NiceDateDemo} />
-          <Route path="pretty-raw" component={PrettyRawView} />
+          <Route path="hover-shifter" component={HoverShifterDemo} />
+          <Route path="niceraw" component={NiceRawDemo} />
           <Route path="markdown" component={MarkdownView} />
           <Route path="msg-view" component={MsgViewView} />
           <Route path="stepped-progress-bar" component={SteppedProgressBarDemo} />

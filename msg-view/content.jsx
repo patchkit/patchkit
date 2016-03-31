@@ -2,16 +2,14 @@
 import React from 'react'
 import mlib from 'ssb-msgs'
 import ssbref from 'ssb-ref'
-import { MsgLink, UserLink } from '../common'
+import { MsgLink, UserLink } from 'patchkit-links'
 import { Block as MdBlock, Inline as MdInline } from '../markdown'
-import { Table as TableRaw, Div as DivRaw } from '../pretty-raw'
+import { Json as JsonRaw, Div as DivRaw } from 'patchkit-niceraw'
 import * as u from 'patchkit-util'
 import * as social from 'patchkit-util/social'
 
 function rawAttrString(msg) {
-  return <div className='raw-message'>
-    <pre><code>{ JSON.stringify( Object.assign({id: msg.key}, msg.value), null, 2 ) }</code></pre>
-  </div>
+  return <JsonRaw obj={Object.assign({id: msg.key}, msg.value)} />
 }
 
 export class Block extends React.Component {
