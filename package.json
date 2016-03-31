@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ssbc/patchkit.git"
+    "url": "git+https://github.com/patchkit/patchkit.git"
   },
   "keywords": [
     "react",
@@ -50,9 +50,9 @@
   "author": "Paul Frazee <pfrazee@gmail.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/ssbc/patchkit/issues"
+    "url": "https://github.com/patchkit/patchkit/issues"
   },
-  "homepage": "https://github.com/ssbc/patchkit#readme",
+  "homepage": "https://github.com/patchkit/patchkit#readme",
   "browserify": {
     "transform": [
       [

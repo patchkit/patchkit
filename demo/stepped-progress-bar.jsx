@@ -30,7 +30,7 @@ class SPB extends React.Component {
 export default class SteppedProgressBarView extends React.Component {
   render() {
     return <div>
-      <h1>patchkit/stepped-progress-bar</h1>
+      <h1>patchkit-stepped-progress-bar</h1>
       <section className="stepped-progress-bar-num3">
         <header>&lt;SteppedProgressBar num="3"&gt;</header>
         <div className="content"><SPB num={3}/></div>
