@@ -5,8 +5,8 @@ import ssbref from 'ssb-ref'
 import { MsgLink, UserLink } from '../common'
 import { Block as MdBlock, Inline as MdInline } from '../markdown'
 import { Table as TableRaw, Div as DivRaw } from '../pretty-raw'
-import * as social from '../lib/social'
-import * as u from '../lib/util'
+import * as u from 'patchkit-util'
+import * as social from 'patchkit-util/social'
 
 function rawAttrString(msg) {
   return <div className='raw-message'>

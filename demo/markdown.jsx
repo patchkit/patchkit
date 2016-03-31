@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Markdown from '../markdown'
-import * as msgs from '../fixtures/msgs'
+import * as msgs from 'patchkit-fixtures/msgs'
 
 export default class MarkdownView extends React.Component {
   render() {

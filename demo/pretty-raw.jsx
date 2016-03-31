@@ -1,6 +1,6 @@
 import React from 'react'
 import * as PrettyRaw from '../pretty-raw'
-import { posts } from '../fixtures/msgs'
+import { posts } from 'patchkit-fixtures/msgs'
 
 export default class PrettyRawView extends React.Component {
   render() {

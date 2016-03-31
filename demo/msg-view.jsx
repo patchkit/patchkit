@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Content from '../msg-view/content'
-import * as msgs from '../fixtures/msgs'
+import * as msgs from 'patchkit-fixtures/msgs'
 
 export default class MsgViewView extends React.Component {
   render() {

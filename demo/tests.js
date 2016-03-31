@@ -1,7 +1,7 @@
-import common from '../tests/common'
+import links from 'patchkit-links/tests'
 
 var tests = {
-  common: common
+  links: links
 }
 
 // iterate the `tests`, go to the page signified by the key, and run the test function

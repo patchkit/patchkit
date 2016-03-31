@@ -6,13 +6,14 @@ import PatchKit from '../index'
 import runTests from './tests'
 
 import CommonView from './common'
+import LinksDemo from 'patchkit-links/demo'
 import PrettyRawView from './pretty-raw'
 import MarkdownView from './markdown'
 import MsgViewView from './msg-view'
 import SteppedProgressBarView from './stepped-progress-bar'
 
-import user from '../fixtures/user'
-import users from '../fixtures/users'
+import user from 'patchkit-fixtures/user'
+import users from 'patchkit-fixtures/users'
 
 function TodoView () {
   return <div>Todo</div>
@@ -28,6 +29,7 @@ function DemoContainer (props) {
     <p>
       <select onChange={onChange} value={location}>
         <option value="common">Common Elements</option>
+        <option value="links">Links</option>
         <option value="pretty-raw">PrettyRaw</option>
         <option value="markdown">Markdown</option>
         <option value="msg-view">MsgView</option>
@@ -74,6 +76,7 @@ class PatchKitDemo extends React.Component {
         <Route path="/" component={DemoContainer}>
           <IndexRoute component={CommonView} />
           <Route path="common" component={CommonView} />
+          <Route path="links" component={LinksDemo} />
           <Route path="pretty-raw" component={PrettyRawView} />
           <Route path="markdown" component={MarkdownView} />
           <Route path="msg-view" component={MsgViewView} />
