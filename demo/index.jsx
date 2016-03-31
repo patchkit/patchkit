@@ -10,7 +10,7 @@ import LinksDemo from 'patchkit-links/demo'
 import PrettyRawView from './pretty-raw'
 import MarkdownView from './markdown'
 import MsgViewView from './msg-view'
-import SteppedProgressBarView from './stepped-progress-bar'
+import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
 
 import user from 'patchkit-fixtures/user'
 import users from 'patchkit-fixtures/users'
@@ -29,11 +29,11 @@ function DemoContainer (props) {
     <p>
       <select onChange={onChange} value={location}>
         <option value="common">Common Elements</option>
-        <option value="links">Links</option>
+        <option value="links">patchkit-links</option>
         <option value="pretty-raw">PrettyRaw</option>
         <option value="markdown">Markdown</option>
         <option value="msg-view">MsgView</option>
-        <option value="stepped-progress-bar">SteppedProgressBar</option>
+        <option value="stepped-progress-bar">patchkit-stepped-progress-bar</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -80,7 +80,7 @@ class PatchKitDemo extends React.Component {
           <Route path="pretty-raw" component={PrettyRawView} />
           <Route path="markdown" component={MarkdownView} />
           <Route path="msg-view" component={MsgViewView} />
-          <Route path="stepped-progress-bar" component={SteppedProgressBarView} />
+          <Route path="stepped-progress-bar" component={SteppedProgressBarDemo} />
         </Route>
       </Router>
     </PatchKit>
