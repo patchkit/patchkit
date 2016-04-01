@@ -27,6 +27,7 @@
     "browserify": "^13.0.0",
     "less": "^2.5.3",
     "nodemon": "^1.8.1",
+    "patchkit-base-styles": "^1.0.0",
     "patchkit-fixtures": "^1.0.1",
     "patchkit-hover-shifter": "^1.0.0",
     "patchkit-links": "^1.0.1",
