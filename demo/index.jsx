@@ -12,6 +12,7 @@ import NiceRawDemo from 'patchkit-niceraw/demo'
 import MarkdownDemo from 'patchkit-markdown/demo'
 import MsgContentDemo from 'patchkit-msg-content/demo'
 import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
+import ModalDemo from 'patchkit-modal/demo'
 
 import user from 'patchkit-fixtures/user'
 import users from 'patchkit-fixtures/users'
@@ -36,6 +37,7 @@ function DemoContainer (props) {
         <option value="markdown">patchkit-markdown</option>
         <option value="msg-content">patchkit-msg-content</option>
         <option value="stepped-progress-bar">patchkit-stepped-progress-bar</option>
+        <option value="modal">patchkit-modal</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -72,8 +74,12 @@ class PatchKitDemo extends React.Component {
     return ''
   }
 
+  emit(event, data) {
+    console.log('emit', event, data)
+  }
+
   render() {  
-    return <PatchKit user={user} users={users} toUrl={this.toUrl}>
+    return <PatchKit user={user} users={users} toUrl={this.toUrl} emit={this.emit}>
       <Router>
         <Route path="/" component={DemoContainer}>
           <IndexRoute component={LinksDemo} />
@@ -84,6 +90,7 @@ class PatchKitDemo extends React.Component {
           <Route path="markdown" component={MarkdownDemo} />
           <Route path="msg-content" component={MsgContentDemo} />
           <Route path="stepped-progress-bar" component={SteppedProgressBarDemo} />
+          <Route path="modal" component={ModalDemo} />
         </Route>
       </Router>
     </PatchKit>

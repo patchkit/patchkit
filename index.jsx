@@ -25,7 +25,8 @@ export default class PatchKit extends React.Component {
     return {
       toUrl: this.props.toUrl || this.toUrl.bind(this),
       user: this.props.user,
-      users: this.props.users
+      users: this.props.users,
+      emit: this.props.emit
     }
   }
 
