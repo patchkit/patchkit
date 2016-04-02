@@ -4,19 +4,10 @@
   "description": "Patchwork UI elements",
   "main": "index.jsx",
   "dependencies": {
-    "classnames": "^2.2.3",
     "history": "^1.13.1",
-    "image-loaded": "0.0.2",
-    "moment": "^2.12.0",
-    "multicb": "^1.2.1",
-    "patchwork-threads": "^2.1.0",
     "react": "^0.14.6",
     "react-addons-test-utils": "^0.14.6",
-    "react-clipboard.js": "^0.1.7",
-    "react-dom": "^0.14.6",
-    "react-router": "^1.0.2",
-    "ssb-msgs": "^5.2.0",
-    "ssb-ref": "^2.3.0"
+    "react-dom": "^0.14.6"
   },
   "devDependencies": {
     "babel": "^6.3.26",
@@ -30,21 +21,24 @@
     "patchkit-base-styles": "^1.0.0",
     "patchkit-fixtures": "^1.0.1",
     "patchkit-hover-shifter": "^1.0.0",
+    "patchkit-image-uploader": "^1.0.0",
     "patchkit-links": "^1.0.1",
     "patchkit-markdown": "^1.0.0",
     "patchkit-modal": "^1.0.0",
     "patchkit-msg-content": "^1.0.0",
     "patchkit-nicedate": "^1.0.0",
     "patchkit-niceraw": "^1.0.0",
+    "patchkit-selector": "^1.0.0",
     "patchkit-stepped-progress-bar": "^1.0.0",
     "patchkit-util": "^1.0.1",
+    "react-router": "^1.0.2",
     "tape": "^4.5.1",
     "watchify": "^3.7.0"
   },
   "scripts": {
     "demo": "npm run demo-server & npm run demo-js & npm run demo-css",
     "demo-server": "(cd ./demo && python -m SimpleHTTPServer)",
-    "demo-js": "NODE_ENV=development watchify ./demo/index.jsx --extension=.jsx -o ./demo/index.build.js -v --debug",
+    "demo-js": "NODE_ENV=development watchify ./demo/index.jsx -r react -r react-dom --extension=.jsx -o ./demo/index.build.js -v --debug",
     "demo-css": "nodemon -q -e less -w ./ -x 'lessc --verbose ./demo/index.less ./demo/index.build.css'"
   },
   "repository": {

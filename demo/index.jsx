@@ -13,6 +13,8 @@ import MarkdownDemo from 'patchkit-markdown/demo'
 import MsgContentDemo from 'patchkit-msg-content/demo'
 import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
 import ModalDemo from 'patchkit-modal/demo'
+import ImageUploaderDemo from 'patchkit-image-uploader/demo'
+import SelectorDemo from 'patchkit-selector/demo'
 
 import user from 'patchkit-fixtures/user'
 import users from 'patchkit-fixtures/users'
@@ -38,6 +40,8 @@ function DemoContainer (props) {
         <option value="msg-content">patchkit-msg-content</option>
         <option value="stepped-progress-bar">patchkit-stepped-progress-bar</option>
         <option value="modal">patchkit-modal</option>
+        <option value="image-uploader">patchkit-image-uploader</option>
+        <option value="selector">patchkit-selector</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -91,6 +95,8 @@ class PatchKitDemo extends React.Component {
           <Route path="msg-content" component={MsgContentDemo} />
           <Route path="stepped-progress-bar" component={SteppedProgressBarDemo} />
           <Route path="modal" component={ModalDemo} />
+          <Route path="image-uploader" component={ImageUploaderDemo} />
+          <Route path="selector" component={SelectorDemo} />
         </Route>
       </Router>
     </PatchKit>
