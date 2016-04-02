@@ -15,6 +15,7 @@ import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
 import ModalDemo from 'patchkit-modal/demo'
 import ImageUploaderDemo from 'patchkit-image-uploader/demo'
 import SelectorDemo from 'patchkit-selector/demo'
+import RadiosDemo from 'patchkit-radios/demo'
 
 import user from 'patchkit-fixtures/user'
 import users from 'patchkit-fixtures/users'
@@ -42,6 +43,7 @@ function DemoContainer (props) {
         <option value="modal">patchkit-modal</option>
         <option value="image-uploader">patchkit-image-uploader</option>
         <option value="selector">patchkit-selector</option>
+        <option value="radios">patchkit-radios</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -97,6 +99,7 @@ class PatchKitDemo extends React.Component {
           <Route path="modal" component={ModalDemo} />
           <Route path="image-uploader" component={ImageUploaderDemo} />
           <Route path="selector" component={SelectorDemo} />
+          <Route path="radios" component={RadiosDemo} />
         </Route>
       </Router>
     </PatchKit>
