@@ -20,6 +20,7 @@
     "muxrpc-mock": "^1.0.0",
     "nodemon": "^1.8.1",
     "patchkit-base-styles": "^1.0.0",
+    "patchkit-channel-list": "^1.0.0",
     "patchkit-dropdown": "^1.0.0",
     "patchkit-fixtures": "^1.0.1",
     "patchkit-form-flag-msg": "^1.0.0",
