@@ -2,9 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute } from 'react-router'
 import ssbref from 'ssb-ref'
+import muxmock from 'muxrpc-mock'
 import PatchKit from '../index'
 import runTests from './tests'
+import SSB_MANIFEST from './ssb-manifest'
 
+import RainbowTextDemo from 'patchkit-rainbow-text/demo'
 import LinksDemo from 'patchkit-links/demo'
 import NiceDateDemo from 'patchkit-nicedate/demo'
 import HoverShifterDemo from 'patchkit-hover-shifter/demo'
@@ -19,9 +22,17 @@ import RadiosDemo from 'patchkit-radios/demo'
 import FormFlagMsgDemo from 'patchkit-form-flag-msg/demo'
 import FormProfileNameDemo from 'patchkit-form-profile-name/demo'
 import FormProfileImageDemo from 'patchkit-form-profile-image/demo'
+import SetupFlowDemo from 'patchkit-setup-flow/demo'
 
 import user from 'patchkit-fixtures/user'
 import users from 'patchkit-fixtures/users'
+
+const ssb = muxmock(SSB_MANIFEST, {
+  onAsync:  console.log.bind(console, 'async'),
+  onSource: console.log.bind(console, 'source'),
+  onSink:   console.log.bind(console, 'sink')
+})
+console.log(ssb)
 
 function TodoView () {
   return <div>Todo</div>
@@ -36,6 +47,7 @@ function DemoContainer (props) {
   return <div>
     <p>
       <select onChange={onChange} value={location}>
+        <option value="rainbow-text">patchkit-rainbow-text</option>
         <option value="links">patchkit-links</option>
         <option value="nicedate">patchkit-nicedate</option>
         <option value="hover-shifter">patchkit-hover-shifter</option>
@@ -50,6 +62,7 @@ function DemoContainer (props) {
         <option value="form-flag-msg">patchkit-form-flag-msg</option>
         <option value="form-profile-name">patchkit-form-profile-name</option>
         <option value="form-profile-image">patchkit-form-profile-image</option>
+        <option value="setup-flow">patchkit-setup-flow</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -91,10 +104,11 @@ class PatchKitDemo extends React.Component {
   }
 
   render() {  
-    return <PatchKit user={user} users={users} toUrl={this.toUrl} emit={this.emit}>
+    return <PatchKit user={user} users={users} toUrl={this.toUrl} emit={this.emit} ssb={ssb}>
       <Router>
         <Route path="/" component={DemoContainer}>
-          <IndexRoute component={LinksDemo} />
+          <IndexRoute component={RainbowTextDemo} />
+          <Route path="rainbow-text" component={RainbowTextDemo} />
           <Route path="links" component={LinksDemo} />
           <Route path="nicedate" component={NiceDateDemo} />
           <Route path="hover-shifter" component={HoverShifterDemo} />
@@ -109,6 +123,7 @@ class PatchKitDemo extends React.Component {
           <Route path="form-flag-msg" component={FormFlagMsgDemo} />
           <Route path="form-profile-name" component={FormProfileNameDemo} />
           <Route path="form-profile-image" component={FormProfileImageDemo} />
+          <Route path="setup-flow" component={SetupFlowDemo} />
         </Route>
       </Router>
     </PatchKit>

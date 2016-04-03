@@ -23,10 +23,11 @@ export default class PatchKit extends React.Component {
   static propTypes = TYPES
   getChildContext() {
     return {
+      emit: this.props.emit,
+      ssb: this.props.ssb,
       toUrl: this.props.toUrl || this.toUrl.bind(this),
       user: this.props.user,
-      users: this.props.users,
-      emit: this.props.emit
+      users: this.props.users
     }
   }
 
