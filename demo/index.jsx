@@ -18,6 +18,7 @@ import SelectorDemo from 'patchkit-selector/demo'
 import RadiosDemo from 'patchkit-radios/demo'
 import FormFlagMsgDemo from 'patchkit-form-flag-msg/demo'
 import FormProfileNameDemo from 'patchkit-form-profile-name/demo'
+import FormProfileImageDemo from 'patchkit-form-profile-image/demo'
 
 import user from 'patchkit-fixtures/user'
 import users from 'patchkit-fixtures/users'
@@ -48,6 +49,7 @@ function DemoContainer (props) {
         <option value="radios">patchkit-radios</option>
         <option value="form-flag-msg">patchkit-form-flag-msg</option>
         <option value="form-profile-name">patchkit-form-profile-name</option>
+        <option value="form-profile-image">patchkit-form-profile-image</option>
       </select>
       {' '}<button onClick={runTests}>Run tests</button>
     </p>
@@ -106,6 +108,7 @@ class PatchKitDemo extends React.Component {
           <Route path="radios" component={RadiosDemo} />
           <Route path="form-flag-msg" component={FormFlagMsgDemo} />
           <Route path="form-profile-name" component={FormProfileNameDemo} />
+          <Route path="form-profile-image" component={FormProfileImageDemo} />
         </Route>
       </Router>
     </PatchKit>
