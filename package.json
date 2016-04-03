@@ -37,6 +37,7 @@
     "patchkit-selector": "^1.0.0",
     "patchkit-setup-flow": "^1.0.0",
     "patchkit-stepped-progress-bar": "^1.0.0",
+    "patchkit-tabs": "^1.0.0",
     "patchkit-util": "^1.0.1",
     "react-router": "^1.0.2",
     "tape": "^4.5.1",

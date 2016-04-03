@@ -11,9 +11,12 @@ import RainbowTextDemo from 'patchkit-rainbow-text/demo'
 import LinksDemo from 'patchkit-links/demo'
 import NiceDateDemo from 'patchkit-nicedate/demo'
 import HoverShifterDemo from 'patchkit-hover-shifter/demo'
+import TabsDemo from 'patchkit-tabs/demo'
+
 import NiceRawDemo from 'patchkit-niceraw/demo'
 import MarkdownDemo from 'patchkit-markdown/demo'
 import MsgContentDemo from 'patchkit-msg-content/demo'
+
 import SteppedProgressBarDemo from 'patchkit-stepped-progress-bar/demo'
 import ModalDemo from 'patchkit-modal/demo'
 import ImageUploaderDemo from 'patchkit-image-uploader/demo'
@@ -51,6 +54,7 @@ function DemoContainer (props) {
         <option value="links">patchkit-links</option>
         <option value="nicedate">patchkit-nicedate</option>
         <option value="hover-shifter">patchkit-hover-shifter</option>
+        <option value="tabs">patchkit-tabs</option>
         <option value="niceraw">patchkit-niceraw</option>
         <option value="markdown">patchkit-markdown</option>
         <option value="msg-content">patchkit-msg-content</option>
@@ -112,6 +116,7 @@ class PatchKitDemo extends React.Component {
           <Route path="links" component={LinksDemo} />
           <Route path="nicedate" component={NiceDateDemo} />
           <Route path="hover-shifter" component={HoverShifterDemo} />
+          <Route path="tabs" component={TabsDemo} />
           <Route path="niceraw" component={NiceRawDemo} />
           <Route path="markdown" component={MarkdownDemo} />
           <Route path="msg-content" component={MsgContentDemo} />
