@@ -12,6 +12,7 @@ import LinksDemo from 'patchkit-links/demo'
 import NiceDateDemo from 'patchkit-nicedate/demo'
 import HoverShifterDemo from 'patchkit-hover-shifter/demo'
 import TabsDemo from 'patchkit-tabs/demo'
+import DropdownDemo from 'patchkit-dropdown/demo'
 
 import NiceRawDemo from 'patchkit-niceraw/demo'
 import MarkdownDemo from 'patchkit-markdown/demo'
@@ -35,7 +36,6 @@ const ssb = muxmock(SSB_MANIFEST, {
   onSource: console.log.bind(console, 'source'),
   onSink:   console.log.bind(console, 'sink')
 })
-console.log(ssb)
 
 function TodoView () {
   return <div>Todo</div>
@@ -55,6 +55,7 @@ function DemoContainer (props) {
         <option value="nicedate">patchkit-nicedate</option>
         <option value="hover-shifter">patchkit-hover-shifter</option>
         <option value="tabs">patchkit-tabs</option>
+        <option value="dropdown">patchkit-dropdown</option>
         <option value="niceraw">patchkit-niceraw</option>
         <option value="markdown">patchkit-markdown</option>
         <option value="msg-content">patchkit-msg-content</option>
@@ -117,6 +118,7 @@ class PatchKitDemo extends React.Component {
           <Route path="nicedate" component={NiceDateDemo} />
           <Route path="hover-shifter" component={HoverShifterDemo} />
           <Route path="tabs" component={TabsDemo} />
+          <Route path="dropdown" component={DropdownDemo} />
           <Route path="niceraw" component={NiceRawDemo} />
           <Route path="markdown" component={MarkdownDemo} />
           <Route path="msg-content" component={MsgContentDemo} />
