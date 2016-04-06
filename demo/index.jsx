@@ -15,6 +15,7 @@ import TabsDemo from 'patchkit-tabs/demo'
 import DropdownDemo from 'patchkit-dropdown/demo'
 import TokensInputDemo from 'patchkit-tokens-input/demo'
 import ChannelListDemo from 'patchkit-channel-list/demo'
+import SearchPaletteDemo from 'patchkit-search-palette/demo'
 
 import NiceRawDemo from 'patchkit-niceraw/demo'
 import MarkdownDemo from 'patchkit-markdown/demo'
@@ -60,6 +61,7 @@ function DemoContainer (props) {
         <option value="dropdown">patchkit-dropdown</option>
         <option value="tokens-input">patchkit-tokens-input</option>
         <option value="channel-list">patchkit-channel-list</option>
+        <option value="search-palette">patchkit-search-palette</option>
         <option value="niceraw">patchkit-niceraw</option>
         <option value="markdown">patchkit-markdown</option>
         <option value="msg-content">patchkit-msg-content</option>
@@ -125,6 +127,7 @@ class PatchKitDemo extends React.Component {
           <Route path="dropdown" component={DropdownDemo} />
           <Route path="tokens-input" component={TokensInputDemo} />
           <Route path="channel-list" component={ChannelListDemo} />
+          <Route path="search-palette" component={SearchPaletteDemo} />
           <Route path="niceraw" component={NiceRawDemo} />
           <Route path="markdown" component={MarkdownDemo} />
           <Route path="msg-content" component={MsgContentDemo} />
