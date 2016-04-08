@@ -6,7 +6,7 @@ const TYPES = {
   events:  React.PropTypes.shape({
     emit: React.PropTypes.func,
     on: React.PropTypes.func,
-    removeEventListener: React.PropTypes.func
+    removeListener: React.PropTypes.func
   }),
   toUrl: React.PropTypes.func,
   user: React.PropTypes.shape({
