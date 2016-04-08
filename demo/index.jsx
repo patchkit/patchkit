@@ -18,6 +18,7 @@ import ChannelListDemo from 'patchkit-channel-list/demo'
 import SearchPaletteDemo from 'patchkit-search-palette/demo'
 
 import VerticalFilledDemo from 'patchkit-vertical-filled/demo'
+import SimpleInfiniteDemo from 'patchkit-simple-infinite/demo'
 
 import NiceRawDemo from 'patchkit-niceraw/demo'
 import MarkdownDemo from 'patchkit-markdown/demo'
@@ -65,6 +66,7 @@ function DemoContainer (props) {
         <option value="channel-list">patchkit-channel-list</option>
         <option value="search-palette">patchkit-search-palette</option>
         <option value="vertical-filled">patchkit-vertical-filled</option>
+        <option value="simple-infinite">patchkit-simple-infinite</option>
         <option value="niceraw">patchkit-niceraw</option>
         <option value="markdown">patchkit-markdown</option>
         <option value="msg-content">patchkit-msg-content</option>
@@ -132,6 +134,7 @@ class PatchKitDemo extends React.Component {
           <Route path="channel-list" component={ChannelListDemo} />
           <Route path="search-palette" component={SearchPaletteDemo} />
           <Route path="vertical-filled" component={VerticalFilledDemo} />
+          <Route path="simple-infinite" component={SimpleInfiniteDemo} />
           <Route path="niceraw" component={NiceRawDemo} />
           <Route path="markdown" component={MarkdownDemo} />
           <Route path="msg-content" component={MsgContentDemo} />
