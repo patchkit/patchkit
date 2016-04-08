@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute } from 'react-router'
+import EventEmitter from 'events'
 import ssbref from 'ssb-ref'
 import muxmock from 'muxrpc-mock'
 import PatchKit from '../index'
@@ -95,6 +96,7 @@ class PatchKitDemo extends React.Component {
       user: user,
       users: users
     }
+    this.events = new EventEmitter()
   }
 
   toUrl(ref, opts) {
@@ -117,12 +119,8 @@ class PatchKitDemo extends React.Component {
     return ''
   }
 
-  emit(event, data) {
-    console.log('emit', event, data)
-  }
-
   render() {  
-    return <PatchKit user={user} users={users} toUrl={this.toUrl} emit={this.emit} ssb={ssb}>
+    return <PatchKit user={user} users={users} toUrl={this.toUrl} events={this.events} ssb={ssb}>
       <Router>
         <Route path="/" component={DemoContainer}>
           <IndexRoute component={RainbowTextDemo} />

@@ -3,7 +3,11 @@ import ssbref from 'ssb-ref'
 
 const TYPES = {
   ssb: React.PropTypes.object,
-  emit: React.PropTypes.func,
+  events:  React.PropTypes.shape({
+    emit: React.PropTypes.func,
+    on: React.PropTypes.func,
+    removeEventListener: React.PropTypes.func
+  }),
   toUrl: React.PropTypes.func,
   user: React.PropTypes.shape({
     id: React.PropTypes.string,
@@ -23,7 +27,7 @@ export default class PatchKit extends React.Component {
   static propTypes = TYPES
   getChildContext() {
     return {
-      emit: this.props.emit,
+      events: this.props.events,
       ssb: this.props.ssb,
       toUrl: this.props.toUrl || this.toUrl.bind(this),
       user: this.props.user,
