@@ -32,6 +32,7 @@ import ModalDemo from 'patchkit-modal/demo'
 import ImageUploaderDemo from 'patchkit-image-uploader/demo'
 import SelectorDemo from 'patchkit-selector/demo'
 import RadiosDemo from 'patchkit-radios/demo'
+import FormPromptDemo from 'patchkit-form-prompt/demo'
 import FormFlagMsgDemo from 'patchkit-form-flag-msg/demo'
 import FormProfileNameDemo from 'patchkit-form-profile-name/demo'
 import FormProfileImageDemo from 'patchkit-form-profile-image/demo'
@@ -80,6 +81,7 @@ function DemoContainer (props) {
         <option value="image-uploader">patchkit-image-uploader</option>
         <option value="selector">patchkit-selector</option>
         <option value="radios">patchkit-radios</option>
+        <option value="form-prompt">patchkit-form-prompt</option>
         <option value="form-flag-msg">patchkit-form-flag-msg</option>
         <option value="form-profile-name">patchkit-form-profile-name</option>
         <option value="form-profile-image">patchkit-form-profile-image</option>
@@ -147,6 +149,7 @@ class PatchKitDemo extends React.Component {
           <Route path="image-uploader" component={ImageUploaderDemo} />
           <Route path="selector" component={SelectorDemo} />
           <Route path="radios" component={RadiosDemo} />
+          <Route path="form-prompt" component={FormPromptDemo} />
           <Route path="form-flag-msg" component={FormFlagMsgDemo} />
           <Route path="form-profile-name" component={FormProfileNameDemo} />
           <Route path="form-profile-image" component={FormProfileImageDemo} />
