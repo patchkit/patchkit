@@ -22,6 +22,7 @@
     "patchkit-base-styles": "^1.0.0",
     "patchkit-channel-list": "^1.0.0",
     "patchkit-dropdown": "^1.0.0",
+    "patchkit-dropdown-selector": "^1.0.0",
     "patchkit-fixtures": "^1.0.1",
     "patchkit-form-flag-msg": "^1.0.0",
     "patchkit-form-profile-image": "^1.0.0",

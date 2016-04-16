@@ -14,6 +14,7 @@ import NiceDateDemo from 'patchkit-nicedate/demo'
 import HoverShifterDemo from 'patchkit-hover-shifter/demo'
 import TabsDemo from 'patchkit-tabs/demo'
 import DropdownDemo from 'patchkit-dropdown/demo'
+import DropdownSelectorDemo from 'patchkit-dropdown-selector/demo'
 import TokensInputDemo from 'patchkit-tokens-input/demo'
 import ChannelListDemo from 'patchkit-channel-list/demo'
 import SearchPaletteDemo from 'patchkit-search-palette/demo'
@@ -66,6 +67,7 @@ function DemoContainer (props) {
         <option value="hover-shifter">patchkit-hover-shifter</option>
         <option value="tabs">patchkit-tabs</option>
         <option value="dropdown">patchkit-dropdown</option>
+        <option value="dropdown-selector">patchkit-dropdown-selector</option>
         <option value="tokens-input">patchkit-tokens-input</option>
         <option value="channel-list">patchkit-channel-list</option>
         <option value="search-palette">patchkit-search-palette</option>
@@ -134,6 +136,7 @@ class PatchKitDemo extends React.Component {
           <Route path="hover-shifter" component={HoverShifterDemo} />
           <Route path="tabs" component={TabsDemo} />
           <Route path="dropdown" component={DropdownDemo} />
+          <Route path="dropdown-selector" component={DropdownSelectorDemo} />
           <Route path="tokens-input" component={TokensInputDemo} />
           <Route path="channel-list" component={ChannelListDemo} />
           <Route path="search-palette" component={SearchPaletteDemo} />
